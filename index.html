@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Smart Attendance System
+    </title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <header>
+
+            <h1>
+
+                SMART ATTENDANCE SYSTEM
+
+            </h1>
+
+            <p>
+
+                Scanner Absensi Panitia
+
+            </p>
+
+        </header>
+
+        <!-- ========================= -->
+        <!-- CAMERA -->
+        <!-- ========================= -->
+
+        <section
+            class="camera">
+
+            <div id="reader"></div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- RESULT -->
+        <!-- ========================= -->
+
+        <section
+            class="result">
+
+            <h2>
+
+                Status
+
+            </h2>
+
+            <div
+                id="status"
+                class="waiting">
+
+                Menunggu Scan...
+
+            </div>
+
+            <table>
+
+                <tr>
+
+                    <td>Nama</td>
+
+                    <td id="nama">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Instansi</td>
+
+                    <td id="instansi">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sesi</td>
+
+                    <td id="sesi">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Status</td>
+
+                    <td id="hadir">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Jam</td>
+
+                    <td id="jam">-</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <!-- html5-qrcode -->
+
+    <script src="lib/html5-qrcode.min.js"></script>
+
+    <!-- API -->
+
+    <script src="js/api.js"></script>
+
+    <!-- Scanner -->
+
+    <script src="js/scanner.js"></script>
+
+</body>
+
+</html>
