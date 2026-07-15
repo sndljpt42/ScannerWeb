@@ -34,53 +34,53 @@ const API_URL =
  * Object JSON dari API
  * ============================================================
  */
-// async function sendAttendance(token) {
-
-//     // Data yang akan dikirim ke API
-//     const payload = {
-//         token: token
-//     };
-
-//     // Mengirim request POST
-//     const response = await fetch(API_URL, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(payload)
-//     });
-
-//     // Mengubah response menjadi JSON
-//     const result = await response.json();
-
-//     // Mengembalikan hasil
-//     return result;
-
-// }
-
 async function sendAttendance(token) {
 
-    console.log("API URL:", API_URL);
-
+    // Data yang akan dikirim ke API
     const payload = {
         token: token
     };
 
-    console.log("Payload:", payload);
-
-    const response = await fetch(API_URL,{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
+    // Mengirim request POST
+    const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
         },
-        body:JSON.stringify(payload)
+        body: JSON.stringify(payload)
     });
 
-    console.log("Status:", response.status);
-
+    // Mengubah response menjadi JSON
     const result = await response.json();
 
-    console.log(result);
-
+    // Mengembalikan hasil
     return result;
+
 }
+
+// async function sendAttendance(token) {
+
+//     console.log("API URL:", API_URL);
+
+//     const payload = {
+//         token: token
+//     };
+
+//     console.log("Payload:", payload);
+
+//     const response = await fetch(API_URL,{
+//         method:"POST",
+//         headers:{
+//             "Content-Type":"application/json"
+//         },
+//         body:JSON.stringify(payload)
+//     });
+
+//     console.log("Status:", response.status);
+
+//     const result = await response.json();
+
+//     console.log(result);
+
+//     return result;
+// }
