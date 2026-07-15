@@ -66,11 +66,13 @@ function startScanner() {
  */
 function onScanSuccess(decodedText) {
 
-    console.clear();
+    // console.clear();
 
-    console.log("TOKEN:");
+    // console.log("TOKEN:");
 
-    console.log(decodedText);
+    // console.log(decodedText);
+
+   processQRCode(decodedText);
 
 }
 

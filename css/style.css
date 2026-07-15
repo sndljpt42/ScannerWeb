@@ -155,3 +155,187 @@ td:first-child{
     font-weight:bold;
 
 }
+
+/* ==========================================
+   Result Panel
+========================================== */
+
+#resultPanel{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+#resultIcon{
+
+    font-size:48px;
+
+}
+
+#resultTitle{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+#resultMessage{
+
+    margin-top:8px;
+
+    font-size:16px;
+
+}
+
+.success{
+
+    background:#e8fff0;
+
+    border:2px solid #22c55e;
+
+}
+
+.error{
+
+    background:#fff0f0;
+
+    border:2px solid #ef4444;
+
+}
+
+.warning{
+
+    background:#fff9db;
+
+    border:2px solid orange;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ======================================================
+   RESULT CARD
+====================================================== */
+
+.result-card{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+    transition:all .35s ease;
+
+    animation:fadeIn .35s;
+
+}
+
+.success{
+
+    background:#d1fae5;
+
+    border:3px solid #22c55e;
+
+}
+
+.error{
+
+    background:#fee2e2;
+
+    border:3px solid #ef4444;
+
+}
+
+.warning{
+
+    background:#fef3c7;
+
+    border:3px solid #f59e0b;
+
+}
+
+.result-icon{
+
+    font-size:60px;
+
+}
+
+.result-title{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+}
+
+.participant-name{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    text-transform:uppercase;
+
+}
+
+.participant-info{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
