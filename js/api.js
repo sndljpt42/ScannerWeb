@@ -59,30 +59,24 @@ const API_URL =
 // }
 
 
-async function sendAttendance(token){
+async function sendAttendance(token) {
 
     console.log("API:", API_URL);
 
-    const payload = {
-        token: token
-    };
+    const formData = new URLSearchParams();
 
-    console.log(payload);
+    formData.append("token", token);
 
-    const response = await fetch(API_URL,{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(payload)
+    const response = await fetch(API_URL, {
+
+        method: "POST",
+
+        body: formData
+
     });
 
-    console.log("STATUS:",response.status);
+    const result = await response.json();
 
-    const text = await response.text();
-
-    console.log(text);
-
-    return JSON.parse(text);
+    return result;
 
 }
