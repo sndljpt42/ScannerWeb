@@ -34,26 +34,55 @@ const API_URL =
  * Object JSON dari API
  * ============================================================
  */
-async function sendAttendance(token) {
+// async function sendAttendance(token) {
 
-    // Data yang akan dikirim ke API
+//     // Data yang akan dikirim ke API
+//     const payload = {
+//         token: token
+//     };
+
+//     // Mengirim request POST
+//     const response = await fetch(API_URL, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(payload)
+//     });
+
+//     // Mengubah response menjadi JSON
+//     const result = await response.json();
+
+//     // Mengembalikan hasil
+//     return result;
+
+// }
+
+
+async function sendAttendance(token){
+
+    console.log("API:", API_URL);
+
     const payload = {
         token: token
     };
 
-    // Mengirim request POST
-    const response = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
+    console.log(payload);
+
+    const response = await fetch(API_URL,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
         },
-        body: JSON.stringify(payload)
+        body:JSON.stringify(payload)
     });
 
-    // Mengubah response menjadi JSON
-    const result = await response.json();
+    console.log("STATUS:",response.status);
 
-    // Mengembalikan hasil
-    return result;
+    const text = await response.text();
+
+    console.log(text);
+
+    return JSON.parse(text);
 
 }

@@ -63,13 +63,23 @@ async function processQRCode(token) {
         // Nanti kita tampilkan popup sukses/gagal.
         // ====================================================
 
-    } catch (error) {
+    } 
 
-        console.error(error);
+    catch(error){
 
-        alert("Gagal terhubung ke server.");
+    console.error(error);
+
+    alert(error.stack);
 
     }
+    
+    // catch (error) {
+
+    //     console.error(error);
+
+    //     alert("Gagal terhubung ke server.");
+
+    // }
 
     // Memberi jeda 2,5 detik
     // agar QR yang sama tidak terbaca terus.
