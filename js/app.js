@@ -47,6 +47,11 @@ async function processQRCode(token) {
     // Mengunci proses.
     isProcessing = true;
 
+    // ====================================================
+    // Mencatat waktu mulai scan.
+    // ====================================================
+    const scanStart = performance.now();
+
     try {
 
         console.log("QR :", token);
@@ -57,6 +62,12 @@ async function processQRCode(token) {
             token
         );
 
+        // ====================================================
+// Menghitung total waktu scan.
+// ====================================================
+        result.totalScanTime =
+            performance.now() - scanStart;
+            
         showResult(result);
         console.timeEnd("SCAN_PROCESS");
 
@@ -138,8 +149,22 @@ function showResult(result){
 
         <b>Jam Scan</b><br>
         ${result.data.scanTime}
-        
+
+        <br><br>
+
+        <hr>
+
+        <b>Response API</b><br>
+        ${(result.apiResponseTime/1000).toFixed(3)} detik
+
+        <br><br>
+
+        <b>Total Scan</b><br>
+        ${(result.totalScanTime/1000).toFixed(3)} detik
         `;
+                
+        `;
+        
 
         playSuccessSound();
 
