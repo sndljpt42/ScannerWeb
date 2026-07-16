@@ -161,11 +161,11 @@ function showResult(result){
 
         <b>Total Scan</b><br>
         ${(result.totalScanTime/1000).toFixed(3)} detik
-        
+
         `;
                        
 
-        playSuccessSound();
+        // playSuccessSound();
 
     }
 
