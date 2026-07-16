@@ -55,7 +55,7 @@ async function processQRCode(token) {
     try {
 
         console.log("QR :", token);
-        console.time("SCAN_PROCESS");
+        // console.time("SCAN_PROCESS");
 
         // Mengirim ke Google Apps Script.
         const result = await sendAttendance(
@@ -69,7 +69,7 @@ async function processQRCode(token) {
             performance.now() - scanStart;
             
         showResult(result);
-        console.timeEnd("SCAN_PROCESS");
+        // console.timeEnd("SCAN_PROCESS");
 
         // ====================================================
         // TODO
