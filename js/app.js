@@ -146,6 +146,12 @@ function showResult(result){
         ${result.data.attendanceStatus}
 
         <br><br>
+        
+        <b>Waktu</b><br>
+
+        ${result.data.scanTime}
+
+        <br><br>
         `;
                        
 
