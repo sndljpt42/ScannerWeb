@@ -20,7 +20,7 @@
 // Ganti dengan URL Web App Anda.
 // ============================================================
 const API_URL =
-    "https://script.google.com/macros/s/AKfycbyXuHlgNcRQkkErhAm3JnPL0TAq1LcoChWO9VYBoaCvdguB-sPmLC-zj_lOrTdPRyUtsg/exec";
+    "https://script.google.com/macros/s/AKfycbyyMvO21630rptQakaBZFVyuMQwnhRXQMHSQgO23kJE8Wg7hbycTEdprbuwltvd53KNvg/exec";
 
 /**
  * ============================================================
