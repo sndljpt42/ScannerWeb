@@ -58,13 +58,13 @@ async function processQRCode(token) {
         console.time("SCAN_PROCESS");
 
         // Mengirim ke Google Apps Script.
-        const result = await sendAttendance(
+       const result = await sendAttendance(
             token
         );
 
         // ====================================================
-// Menghitung total waktu scan.
-// ====================================================
+        // Menghitung total waktu scan.
+        // ====================================================
         result.totalScanTime =
             performance.now() - scanStart;
             
