@@ -59,28 +59,6 @@ const API_URL =
 // }
 
 
-// async function sendAttendance(token) {
-
-//     console.log("API:", API_URL);
-
-//     const formData = new URLSearchParams();
-
-//     formData.append("token", token);
-
-//     const response = await fetch(API_URL, {
-
-//         method: "POST",
-
-//         body: formData
-
-//     });
-
-//     const result = await response.json();
-
-//     return result;
-
-// }
-
 async function sendAttendance(token){
 
     console.log("API:", API_URL);
@@ -89,10 +67,7 @@ async function sendAttendance(token){
         token: token
     };
 
-    // ==========================================
-    // Mulai menghitung request API.
-    // ==========================================
-    const apiStart = performance.now();
+    console.log(payload);
 
     const response = await fetch(API_URL,{
         method:"POST",
@@ -102,16 +77,12 @@ async function sendAttendance(token){
         body:JSON.stringify(payload)
     });
 
+    console.log("STATUS:",response.status);
+
     const text = await response.text();
 
-    const result = JSON.parse(text);
+    console.log(text);
 
-    // ==========================================
-    // Lama request API.
-    // ==========================================
-    result.apiResponseTime =
-        performance.now() - apiStart;
-
-    return result;
+    return JSON.parse(text);
 
 }
