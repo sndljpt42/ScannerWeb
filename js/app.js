@@ -69,6 +69,7 @@ async function processQRCode(token) {
 
         // Mengirim token ke Google Apps Script
         const result = await sendAttendance(token);
+        console.log(result.performance);
 
         // Selesai menerima response
         const apiEnd = performance.now();
